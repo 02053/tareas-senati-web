@@ -231,7 +231,6 @@ h6,
 }
 
 .job h1 {
-    line-height: 3;
     border-radius: 1rem;
     padding: 1rem;
     font-family: var(--font-title);
@@ -243,10 +242,14 @@ h6,
 .info-student {
     font-family: var(--font-text);
     font-size: var(--step-1);
-    margin-left: 2rem;
     background-color: #3A435E;
     padding: 1rem;
     color: #fff;
+}
+
+.info-student ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 .info-student strong {

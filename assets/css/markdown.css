@@ -28,17 +28,15 @@ html {
 }
 
 body {
-    background-image: url('../../assets/media/pngwing.com(3).png');
-    background-size: cover;
-}
-
-pre {
-    margin-left: 2rem;
+    background-image: url('../../assets/media/pngwing.com(3).png'),
+        url('../../assets/media/pngwing.com\(2\).png');
+    background-size: cover, 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom center, 0% 0%;
 }
 
 code {
-    font-family: Mononoki, monospace;
-    border-radius: 1rem;
+    border-radius: .3em;
 }
 
 h1 {
@@ -47,8 +45,7 @@ h1 {
     background-color: #171c28;
 }
 
-h3 {
-    font-family: Luna, monospace;
+h4 {
     color: #ffb563;
     background-color: #272838;
     padding: 1rem;
