@@ -1,4 +1,4 @@
-/* ******************** Fonts ******************** */
+/* ******************** Fonts ******************** *//*{{{*/
 @font-face {
     font-family: Sfttr;
     src: url("../../assets/typografy/SetFireToTheRain.ttf");
@@ -16,7 +16,7 @@
     font-family: Luna;
     src: url("../../assets/typografy/Luna.ttf");
     font-display: swap;
-}
+}/*}}}*/
 
 /* ******************** Fluid Design ******************** */
 
@@ -63,14 +63,25 @@
 /* ******************** Custom Properties ******************** */
 :root {
     --font-code: Mononoki, monospace;
-    --font-text: Sfttr, monospace;
-    --font-title: Luna, monospace;
-    --bg-color: #fff;
+    --font-text: Roboto Mono, monospace;
+    --font-title: Roboto Mono, monospace;
+    --bg-color: #fffff;
     --text-color: #000;
+
+    /* main colors */
+    --primary-color-1: #000000;
+    --primary-color-2: #474747;
+    --primary-color-3: #bae67e;
+
+    /* neutral colors */
+    --dark-grey: #777777;
+    --grey: #dfdfdf;
+    --light-grey: #f4f4f4;
+    --white: #ffffff;
 
     --container-sm: 768px;
     --container-md: 992px;
-    --container-lg: 1200px;
+    --container-lg: 1400px;
 }
 
 /* ******************** User Prefers ******************** */
@@ -133,6 +144,12 @@ blockquote {
   opacity: 0.75;
 }
 
+ul,
+li {
+    font-size: var(--step--1);
+    color: var(--primary-color-2);
+}
+
 blockquote p,
 figure {
   margin: 0;
@@ -141,14 +158,14 @@ figure {
 code,
 pre {
   font-family: var(--font-code);
-  font-size: 0.85em;
-  font-size: var(--step--1);
+  font-size: var(--space-xs);
+  border-radius: .5rem;
 }
 
-em,
-i {
-  font-style: italic;
-}
+/* em, */
+/* i { */
+/*   font-style: italic; */
+/* } */
 
 img {
   max-width: 100%;
@@ -178,8 +195,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-title);
-  font-weight: 600;
-  line-height: 2;
+  font-weight: 400;
   margin: 0.5em 0;
 }
 
@@ -187,12 +203,18 @@ h6 {
   font-size: var(--step-5);
 }
 
-h1,
 .step-4 {
   font-size: var(--step-4);
 }
 
-h2,
+h1 {
+    font-size: var(--step-1);
+}
+
+h2 {
+    font-size: var(--step-0);
+}
+
 .step-3 {
   font-size: var(--step-3);
 }
@@ -230,28 +252,176 @@ h6,
     margin-right: auto;
 }
 
+.job p {
+    font-size: var(--step--1);
+    color: var(--primary-color-2);
+}
+
+.job em {
+    font-size: var(--step--2);
+    color: var(--dark-grey);
+    font-style: normal;
+}
+
+.job h2 {
+    font-size: var(--step-0);
+    color: var(--primary-color-2);
+}
+
 .job h1 {
-    border-radius: 1rem;
-    padding: 1rem;
     font-family: var(--font-title);
-    margin-right: var(--step-1);
-    margin-left: var(--step-1);
-    width: 90%;
-}
-
-.info-student {
-    font-family: var(--font-text);
+    color: var(--primary-color-2);
     font-size: var(--step-1);
-    background-color: #3A435E;
-    padding: 1rem;
-    color: #fff;
 }
 
-.info-student ul {
+.job .job-content {
+    margin-top: var(--step-3);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: var(--container-lg);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-right: var(--step-1);
+    padding-left: var(--step-1);
+    margin-bottom: var(--space-l);
+}
+
+.header > span {
+    font-size: var(--step-1);
+}
+
+.menu {
+    font-size: var(--step--1);
     list-style: none;
-    padding-left: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 
-.info-student strong {
-    text-decoration: underline;
+.menu li {
+    padding-right: var(--space-l);
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--dark-grey);
+    position: relative;
+    line-height: 2rem;
+}
+
+.menu li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-grey);
+    position: absolute;
+    bottom: -20%;
+    right: 50%;
+    transition: height, background-color, bottom, right .5s;
+    will-change: width;
+}
+
+.menu li a:hover::after,
+.menu li a:active::after {
+    width: 100%;
+    right: 0;
+}
+
+.header .buscar input {
+    color: var(--primary-color-2);
+    font-size: var(--step--2);
+    font-family: var(--font-title);
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: .2rem;
+    padding: var(--space-xs);
+    outline: none;
+}
+
+.header .buscar {
+    padding: relative;
+}
+
+.header .buscar .icon {
+    background-color: var(--primary-color-3);
+    padding: var(--space-xs);
+    color: var(--white);
+    border-radius: .2rem;
+    position: absolute;
+}
+
+main {
+    width: var(--container-md);
+    max-width: 95%;
+    padding-right: var(--step-1);
+    padding-left: var(--step-1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .category ul {
+    list-style: none;
+    color: var(--dark-grey);
+    font-size: var(--step--1);
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+main .category ul li {
+    cursor: pointer;
+    position: relative;
+}
+
+main .category ul li::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-grey);
+    position: absolute;
+    bottom: -20%;
+    right: 50%;
+    transition: height, background-color, bottom, right .5s;
+    will-change: width;
+}
+
+main .category ul li:hover::after,
+main .category ul li:active::after {
+    width: 100%;
+    right: 0;
+}
+
+.footer {
+    background-color: #f4f4f4;
+    padding: var(--space-m-l);
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer small {
+    font-size: var(--step--2);
+    color: var(--primary-color-2);
+}
+
+.lista-tareas .tarea {
+    margin: var(--space-2xl) 0;
+}
+
+.lista-tareas .tarea em {
+    font-size: var(--step--2);
+    color: var(--dark-grey);
+    font-style: normal;
+}
+
+.lista-tareas .tarea h2 {
+    font-size: var(--step-0);
+    color: var(--primary-color-2);
+    max-width: 70%;
 }

@@ -1,27 +1,17 @@
 <section class="job">
 
+<em>Algoritmia de Programacion</em>
+
 # Tarea Nro. 3
 
+<em>Agosto 10.2022 <span>|</span> Guillermo Mestas</em>
 
-<section class="content-student">
-
-#### Alumno
-
-<aside class="info-student">
-
-* 🐻 **Nombres y Apellidos**: Guillermo Daniel Mestas Alvarez
-* 🐷 **Id**: 1444558
-
-</aside>
-
-</section>
-
-#### Mi primer programa en Python
+## Mi primer programa en Python
 ```python
 print('Hola Mundo')
 ```
 
-#### Suma de dos numeros ingresados
+## Suma de dos numeros ingresados
 ```python
 num1 = float(input('Ingrese el numero 1: '))
 num2 = float(input('Ingrese el numero 2: '))
@@ -30,7 +20,7 @@ sum = num1 + num2
 print(f'La suma es: {sum}')
 ```
 
-#### Conversion entre tipos de datos
+## Conversion entre tipos de datos
 ```python
 j, k = 6, 4.456734
 
@@ -46,25 +36,25 @@ b = float(c) + float(v)
 print(b)
 ```
 
-#### Manejo de Cadenas
+## Manejo de Cadenas
 ```python
 mensaje1 = 'Hola' + ' ' + 'Mundo'
 print(mensaje1)
 ```
 
-#### Listas
+## Listas
 ```python
 frutas = ['naranja', 'manzana', 'pera', 'banana', 'kiwi', 'manzana', 'banana']
 print(frutas[4])
 ```
 
-#### Tuplas
+## Tuplas
 ```python
 lenguajes = ('Python', 'Java', "C", "C++")
 print(lenguajes[0])
 ```
 
-#### Diccionarios
+## Diccionarios
 ```python
 d = {
     'Hola': 123,
@@ -76,7 +66,7 @@ print(d['Hola'])
 print(d['Zeta'])
 ```
 
-#### Ejercicios
+## Ejercicios
 ```python
 name = input('¿Como te llamas? ')
 print(f'{name.upper()} tiene {str(len(name))} letras')
@@ -89,4 +79,5 @@ bmi = round(float(weight) / float(height) ** 2, 2)
 
 print(f'Tu indice de masa corporal es: {str(bmi)}')
 ```
+
 </section>

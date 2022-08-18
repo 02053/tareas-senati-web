@@ -23,31 +23,10 @@
     font-display: swap;
 }
 
-html {
-    font-size: 16px;
-}
-
-body {
-    background-image: url('../../assets/media/pngwing.com(3).png'),
-        url('../../assets/media/pngwing.com\(2\).png');
-    background-size: cover, 50%;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom center, 0% 0%;
-}
-
-code {
-    border-radius: .3em;
-}
-
-h1 {
-    text-align: center;
-    color: #5ccfe6;
-    background-color: #171c28;
-}
-
-h4 {
-    color: #ffb563;
-    background-color: #272838;
-    padding: 1rem;
-    display: inline-block;
-}
+/* body { */
+/*     background-image: url('../../assets/media/pngwing.com(3).png'), */
+/*         url('../../assets/media/pngwing.com\(2\).png'); */
+/*     background-size: cover, 50%; */
+/*     background-repeat: no-repeat, no-repeat; */
+/*     background-position: bottom center, 0% 0%; */
+/* } */
