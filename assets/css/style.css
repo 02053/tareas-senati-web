@@ -24,8 +24,8 @@
 
 :root {
   --step--2: clamp(0.7rem, calc(0.75rem + -0.05vw), 0.74rem);
-  --step--1: clamp(0.94rem, calc(0.87rem + 0.07vw), 0.89rem);
-  --step-0: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
+  --step--1: clamp(0.90rem, calc(0.87rem + 0.07vw), 0.89rem);
+  --step-0: clamp(1.10rem, calc(1.5rem + 0.25vw), 1.30rem);
   --step-1: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
   --step-2: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
   --step-3: clamp(1.84rem, calc(1.53rem + 1.52vw), 2.96rem);
@@ -255,6 +255,7 @@ h6,
 .job p {
     font-size: var(--step--1);
     color: var(--primary-color-2);
+    text-align: justify;
 }
 
 .job em {
@@ -278,82 +279,8 @@ h6,
     margin-top: var(--step-3);
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    width: var(--container-lg);
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
-    padding-right: var(--step-1);
-    padding-left: var(--step-1);
-    margin-bottom: var(--space-l);
-}
-
-.header > span {
-    font-size: var(--step-1);
-}
-
-.menu {
-    font-size: var(--step--1);
-    list-style: none;
-    display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-.menu li {
-    padding-right: var(--space-l);
-}
-
-.menu li a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--dark-grey);
-    position: relative;
-    line-height: 2rem;
-}
-
-.menu li a::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background-color: var(--dark-grey);
-    position: absolute;
-    bottom: -20%;
-    right: 50%;
-    transition: height, background-color, bottom, right .5s;
-    will-change: width;
-}
-
-.menu li a:hover::after,
-.menu li a:active::after {
-    width: 100%;
-    right: 0;
-}
-
-.header .buscar input {
-    color: var(--primary-color-2);
-    font-size: var(--step--2);
-    font-family: var(--font-title);
-    background-color: var(--light-grey);
-    border: none;
-    border-radius: .2rem;
-    padding: var(--space-xs);
-    outline: none;
-}
-
-.header .buscar {
-    padding: relative;
-}
-
-.header .buscar .icon {
-    background-color: var(--primary-color-3);
-    padding: var(--space-xs);
-    color: var(--white);
-    border-radius: .2rem;
-    position: absolute;
+.section {
+    padding-top: var(--step--1);
 }
 
 main {
@@ -365,37 +292,37 @@ main {
     margin-right: auto;
 }
 
-main .category ul {
-    list-style: none;
-    color: var(--dark-grey);
-    font-size: var(--step--1);
-    display: flex;
-    padding: 0;
-    justify-content: space-between;
-}
-
-main .category ul li {
-    cursor: pointer;
-    position: relative;
-}
-
-main .category ul li::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background-color: var(--dark-grey);
-    position: absolute;
-    bottom: -20%;
-    right: 50%;
-    transition: height, background-color, bottom, right .5s;
-    will-change: width;
-}
-
-main .category ul li:hover::after,
-main .category ul li:active::after {
-    width: 100%;
-    right: 0;
-}
+/* main .category ul { */
+/*     list-style: none; */
+/*     color: var(--dark-grey); */
+/*     font-size: var(--step--1); */
+/*     display: flex; */
+/*     padding: 0; */
+/*     justify-content: space-between; */
+/* } */
+/**/
+/* main .category ul li { */
+/*     cursor: pointer; */
+/*     position: relative; */
+/* } */
+/**/
+/* main .category ul li::after { */
+/*     content: ""; */
+/*     width: 0; */
+/*     height: 2px; */
+/*     background-color: var(--dark-grey); */
+/*     position: absolute; */
+/*     bottom: -20%; */
+/*     right: 50%; */
+/*     transition: height, background-color, bottom, right .5s; */
+/*     will-change: width; */
+/* } */
+/**/
+/* main .category ul li:hover::after, */
+/* main .category ul li:active::after { */
+/*     width: 100%; */
+/*     right: 0; */
+/* } */
 
 .footer {
     background-color: #f4f4f4;
@@ -408,10 +335,15 @@ main .category ul li:active::after {
 .footer small {
     font-size: var(--step--2);
     color: var(--primary-color-2);
+    text-align: center;
+}
+
+.lista-tareas a {
+    text-decoration: none;
 }
 
 .lista-tareas .tarea {
-    margin: var(--space-2xl) 0;
+    margin: var(--space-xl) 0;
 }
 
 .lista-tareas .tarea em {
@@ -423,5 +355,117 @@ main .category ul li:active::after {
 .lista-tareas .tarea h2 {
     font-size: var(--step-0);
     color: var(--primary-color-2);
-    max-width: 70%;
+    max-width: 90%;
+}
+
+
+/* ******************** Components ******************** */
+
+/* ********** Menu ********** */
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: var(--step--1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--white);
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: hidden;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a:hover {
+    color: var(--primary-color-2)
+}
+
+.logo {
+    font-size: var(--step-1);
+    color: var(--primary-color-2)
+}
+
+.container-btn {
+    width: var(--step-1);
+    height: auto;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 999;
+}
+
+.menu-btn {
+    color: var(--primary-color-1);
+    width: 100%;
+}
+
+.menu#menu:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container-btn {
+        display: none;
+    }
+
+    .menu {
+        opacity: 1;
+        pointer-events: auto;
+        position: static;
+        width: auto;
+        flex-direction: row;
+        height: auto;
+    }
+
+    .menu a {
+        margin: 0 var(--step-2);
+    }
+}
+
+/* ******************** Utilities ******************** */
+
+.none {
+    display: none;
+}
+
+/* ******************** Site styles ******************** */
+
+.header {
+    width: 100%;
+    background-color: var(--white);
+    padding: var(--space-s);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+
+    header {
+        padding-right: var(--step-1);
+        padding-left: var(--step-1);
+        margin-right: auto;
+        margin-left: auto;
+        width: var(--container-lg);
+        max-width: 80%;
+    }
 }

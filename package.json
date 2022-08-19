@@ -1,7 +1,7 @@
 {
   "name": "tareas-senati-web",
   "version": "1.0.0",
-  "description": "Pagina web con las tareas de SENATI",
+  "description": "tareas en la web",
   "main": "index.html",
   "scripts": {
     "dev": "sergey --watch",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/02053/tareas-senati-web.git"
   },
-  "author": "02053",
+  "author": "@02053",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/02053/tareas-senati-web/issues"

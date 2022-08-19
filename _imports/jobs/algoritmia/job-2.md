@@ -2,82 +2,107 @@
 
 <em>Algoritmia de Programacion</em>
 
-# Tarea Nro. 3
+# 2. Codigo de la pagina 9 del manual extenso
 
-<em>Agosto 10.2022 <span>|</span> Guillermo Mestas</em>
+<em>Agosto 9.2022 <span>|</span> Guillermo Mestas</em>
 
-## Mi primer programa en Python
+## Extension:
+
 ```python
-print('Hola Mundo')
+mensaje4 = 'hola' + ' ' + 'mundo'
+print(len(mensaje4))
 ```
 
-## Suma de dos numeros ingresados
-```python
-num1 = float(input('Ingrese el numero 1: '))
-num2 = float(input('Ingrese el numero 2: '))
-sum = num1 + num2
+Salida:
 
-print(f'La suma es: {sum}')
+```shell
+> 10
 ```
 
-## Conversion entre tipos de datos
-```python
-j, k = 6, 4.456734
+## Encontrar:
 
-print('Definimos 2 numeros,')
-print(f'j = {str(j)}')
-print(f'k = {str(k)}')
+```python
+mensaje5 = 'Hola Mundo'
+mensaje5a = mensaje5.find("Mundo")
+print(mensaje5a)
 ```
 
-```python
-c, v = '15.21', '16.672354'
-b = float(c) + float(v)
+Salida:
 
-print(b)
+```shell
+> 5
 ```
 
-## Manejo de Cadenas
+Si la sub-cadena no está presente el programa imprimirá el valor -1.
+
 ```python
-mensaje1 = 'Hola' + ' ' + 'Mundo'
-print(mensaje1)
+mensaje6 = 'Hola Mundo'
+mensaje6a = mensaje6.find("ardilla")
+print(mensaje6a)
 ```
 
-## Listas
-```python
-frutas = ['naranja', 'manzana', 'pera', 'banana', 'kiwi', 'manzana', 'banana']
-print(frutas[4])
+Salida:
+
+```shell
+> -1
 ```
 
-## Tuplas
+## Minusculas:
+
 ```python
-lenguajes = ('Python', 'Java', "C", "C++")
-print(lenguajes[0])
+mensaje7 = "HOLA MUNDO"
+mensaje7a = mensaje7.lower()
+print(mensaje7a)
 ```
 
-## Diccionarios
-```python
-d = {
-    'Hola': 123,
-    'C': 1456,
-    'Zeta': 1974
-}
+Salida:
 
-print(d['Hola'])
-print(d['Zeta'])
+```shell
+> hola mundo
 ```
 
-## Ejercicios
+## Reemplazar:
+
 ```python
-name = input('¿Como te llamas? ')
-print(f'{name.upper()} tiene {str(len(name))} letras')
+mensaje8 = "HOLA MUNDO"
+mensaje8a = mensaje8.replace("L", "pizza")
+print(mensaje8a)
 ```
 
-```python
-weight = input('¿Cual es tu peso en Kg? ')
-height = input('¿Cual es tu alture en metros? ')
-bmi = round(float(weight) / float(height) ** 2, 2)
+Salida:
 
-print(f'Tu indice de masa corporal es: {str(bmi)}')
+```shell
+> HOpizzaA MUNDO
+```
+
+## Cortar:
+
+```python
+mensaje9 = "Hola Mundo"
+mensaje9a = mensaje9[1:8]
+print(mensaje9a)
+```
+
+Salida:
+
+```shell
+> ola Mun
+```
+
+Puedes sustituir las variables por números enteros como en este ejemplo
+
+```python
+mensaje9 = "Hola Mundo"
+startLoc = 2
+endLoc = 8
+mensaje9b = mensaje9[startLoc: endLoc]
+print(mensaje9b)
+```
+
+Salida:
+
+```shell
+> la Mun
 ```
 
 </section>
