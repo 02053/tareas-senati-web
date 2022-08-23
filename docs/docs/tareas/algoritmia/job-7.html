@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="charset" content="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="og:type" content="website">
+<meta name="theme-color" content="#171c28">
+<link rel="icon" href="../../assets/media/hamster.png">
+<link rel="apple-touch-icon" href="../../assets/media/hamster.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/gruvbox-light-soft.min.css"
+integrity="sha512-HCASvUkisVRkxDnRPjJ2crnv44xGTtlNYsaipi4neWNFUQi613L4w6WsD8G4oqgj77YTh3iPuPWU30mZRxS7vA=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="../../assets/css/style.css" rel="stylesheet">
+<script src="../../assets/js/main.js" defer></script>
+
+        <title>Ejercicios de Autoestudio 2</title>
+<meta name="twitter:title" property="og:title" content="Ejercicios de Autoestudio 2">
+
+        <meta name="description" content="Ejercicios de Autoestudio 2">
+<meta name="twitter:description" property="og:description" content="Ejercicios de Autoestudio 2">
+
+    </head>
+    <body>
+        <header class="header">
+    <div class="header-container">
+        <span class="logo">Meliora</span>
+
+        <div class="container-btn">
+            <a href="#menu" class="menu-btn menu-open">
+                <img src="../../assets/media/menu-bars.svg" alt="menu bars svg">
+            </a>
+            <a href="#" class="menu-btn menu-close none">
+                <img src="../../assets/media/menu-close.svg" alt="menu close svg">
+            </a>
+        </div>
+
+        <nav class="menu" id="menu">
+            <a href="../../">Inicio</a>
+            <a href="../../tareas">Tareas</a>
+            <a href="#contactame">Contactame</a>
+            <a href="#more">More</a>
+            <a href="#aspecto">Aspecto</a>
+        </nav>
+        <!-- <i class="fa-solid fa-sun"></i> -->
+        <!-- <i class="fa-solid fa-moon none"></i> -->
+    </div>
+</header>
+
+        <section class="job">
+
+<p><em>Algoritmia de Programacion</em></p>
+<h1 id="7-ejercicios-de-autoestudio-2">7. Ejercicios de Autoestudio 2</h1>
+<p><em>Agosto 10.2022 <span>|</span> Guillermo Mestas</em></p>
+<h2 id="funcion-basica">Funcion basica:</h2>
+<pre><code class="language-python">def suma(a, b):
+    print(&quot;Se suman dos numeros:&quot;)
+    resultado = a + b
+    return resultado
+
+sumatoria = suma(1, 4)
+print(sumatoria)</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; 5</code></pre>
+<h2 id="generar-un-bucle-de-un-numero-con-su-potencia">Generar un bucle de un numero con su potencia:</h2>
+<pre><code class="language-python">def run():
+    LIMITE = 1000000
+
+    contador = 0
+    potencia_2 = 2 ** contador
+
+    while potencia_2 &lt; LIMITE:
+        print(f&quot;2 elevado a {str(contador)} es igual a: {str(potencia_2)}&quot;)
+        contador = contador + 1
+        potencia_2 = 2 ** contador
+
+if __name__==&#39;__main__&#39;:
+    run()</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; 2 elevado a 0 es igual a: 1
+  2 elevado a 1 es igual a: 2
+  2 elevado a 2 es igual a: 4
+  2 elevado a 3 es igual a: 8
+  2 elevado a 4 es igual a: 16
+  2 elevado a 5 es igual a: 32
+  2 elevado a 6 es igual a: 64
+  2 elevado a 7 es igual a: 128
+  2 elevado a 8 es igual a: 256
+  2 elevado a 9 es igual a: 512
+  2 elevado a 10 es igual a: 1024
+  2 elevado a 11 es igual a: 2048
+  2 elevado a 12 es igual a: 4096
+  2 elevado a 13 es igual a: 8192
+  2 elevado a 14 es igual a: 16384
+  2 elevado a 15 es igual a: 32768
+  2 elevado a 16 es igual a: 65536
+  2 elevado a 17 es igual a: 131072
+  2 elevado a 18 es igual a: 262144
+  2 elevado a 19 es igual a: 524288</code></pre>
+<h2 id="adivinar-numero">Adivinar numero:</h2>
+<pre><code class="language-python">import random
+
+def run():
+    numero_aletorio = random.randint(1, 100)
+    numero_elegido = int(input(&quot;Elige un numero del 1 al 100: &quot;))
+
+    while numero_elegido != numero_aletorio:
+        if numero_elegido &lt; numero_aletorio:
+            print(&quot;Busca un numero mas grande&quot;)
+        else:
+            print(&quot;Busca un numero mas pequeño&quot;)
+
+        numero_elegido = int(input(&quot;Elige otro numero: &quot;))
+
+    print(&quot;Ganaste!&quot;)
+
+if __name__==&#39;__main__&#39;:
+    run()</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; Elige un numero del 1 al 100: 80
+  Busca un numero mas pequeño
+  Elige otro numero: 20
+  Busca un numero mas grande
+  Elige otro numero: 50
+  Busca un numero mas pequeño
+  Elige otro numero: 30
+  Busca un numero mas pequeño
+  Elige otro numero: 25
+  Busca un numero mas pequeño
+  Elige otro numero: 21
+  Ganaste!</code></pre>
+<h2 id="conversor-de-monedas">Conversor de monedas:</h2>
+<pre><code class="language-python">def conversor(tipo_moneda, valor_dolar):
+    pesos = input(f&quot;Cuantos {tipo_moneda} tienes?: &quot;)
+    pesos = float(pesos)
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print(f&quot;Tienes ${dolares} dolares&quot;)
+
+menu = &#39;&#39;&#39;
+Bienvenido al conversor de monedas 💰
+
+1 - Pesos colombianos
+2 - Pesos argentinos
+3 - Soles
+
+Elige una opcion: &#39;&#39;&#39;
+
+opcion = int(input(menu))
+
+if opcion == 1:
+    conversor(&quot;pesos Colombianos&quot;, 3875)
+elif opcion == 2:
+    conversor(&quot;pesos Argentinos&quot;, 65)
+elif opcion == 3:
+    conversor(&quot;Soles&quot;, 3.80)
+else:
+    print(&quot;Ingrese una opcion correcta por favor.&quot;)</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; Bienvenido al conversor de monedas 💰
+
+  1 - Pesos colombianos
+  2 - Pesos argentinos
+  3 - Soles
+
+  Elige una opcion: 3
+  Cuantos Soles tienes?: 246
+  Tienes $64.74 dolares</code></pre>
+<h2 id="aplicacion-de-diccionarios-con-un-for">Aplicacion de diccionarios con un for:</h2>
+<pre><code class="language-python">def run():
+    mi_diccionario = {
+        &quot;llave1&quot;: 1,
+        &quot;llave2&quot;: 2,
+        &quot;llave3&quot;: 3
+    }
+
+    poblacion_paises = {
+        &quot;Argentina&quot;: 44938712,
+        &quot;Brazil&quot;: 210147125,
+        &quot;Colombia&quot;: 50372424
+    }
+
+    for pais, poblacion in poblacion_paises.items():
+        print(f&quot;{pais} tiene {str(poblacion)} habitantes&quot;)
+
+if __name__ == &#39;__main__&#39;:
+    run()</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; Argentina tiene 44938712 habitantes
+  Brazil tiene 210147125 habitantes
+  Colombia tiene 50372424 habitantes</code></pre>
+<h2 id="generador-de-contraseñas">Generador de contraseñas:</h2>
+<pre><code class="language-python">import random
+
+def generar_contraseña():
+    mayusculas = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;G&quot;]
+    minusculas = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;]
+    simbolos = [&quot;!&quot;, &quot;#&quot;, &quot;&amp;&quot;, &quot;/&quot;, &quot;(&quot;, &quot;)&quot;]
+    numeros = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;0&quot;]
+
+    caracteres = mayusculas + minusculas + simbolos + numeros
+    contraseña = []
+
+    for i in range(15):
+        caracter_random = random.choice(caracteres)
+        contraseña.append(caracter_random)
+
+    contraseña = &quot;&quot;.join(contraseña)
+    return contraseña
+
+def run():
+    contraseña = generar_contraseña()
+    print(f&quot;Tu nueva contraseña es: {contraseña}&quot;)
+
+if __name__==&#39;__main__&#39;:
+    run()</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; Tu nueva contraseña es: 024EaD3CcAb4(/2</code></pre>
+<h2 id="decir-si-un-numero-es-palindromo">Decir si un numero es palindromo:</h2>
+<pre><code class="language-python">def palindromo(palabra):
+    palabra = palabra.replace(&#39; &#39;, &quot;&quot;)
+    palabra = palabra.lower()
+    palabra_invertida = palabra[::-1]
+
+    if palabra == palabra_invertida:
+        return True
+    else:
+        return False
+
+def run():
+    palabra = input(&quot;Escribe una palabra: &quot;)
+    es_palindromo = palindromo(palabra)
+    if es_palindromo == True:
+        print(&quot;Es palindromo&quot;)
+    else:
+        print(&quot;No es palindromo&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    run()</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; Escribe una palabra: 121
+  Es palindromo</code></pre>
+<h2 id="hallar-un-numero-primo">Hallar un numero primo:</h2>
+<pre><code class="language-python">def es_primo(numero):
+    contador = 0
+
+    for i in range(1, numero + 1):
+        if i == 1 or i == numero:
+            continue
+        if numero % i == 0:
+            contador += 1
+
+    if contador == 0:
+        return True
+    else:
+        return False
+
+def run():
+    numero = int(input(&quot;Escribe un numero: &quot;))
+    if es_primo(numero):
+        print(&quot;Es primo&quot;)
+    else:
+        print(&quot;No es primo&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    run()</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; Escribe un numero: 7
+  Es primo</code></pre>
+<h2 id="recorrer-una-palabra">Recorrer una palabra:</h2>
+<pre><code class="language-python">weight = input(&#39;¿Cual es tu peso en Kg? &#39;)
+height = input(&#39;¿Cual es tu alture en metros? &#39;)
+bmi = round(float(weight) / float(height) ** 2, 2)
+
+print(f&#39;Tu indice de masa corporal es: {str(bmi)}&#39;)</code></pre>
+<p>Salida:</p>
+<pre><code class="language-shell">&gt; Escribe una frase: Hola mundo
+  H
+  O
+  L
+  A
+
+  M
+  U
+  N
+  D
+  O</code></pre>
+</section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"
+integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    hljs.highlightAll()
+</script>
+
+        <footer class="footer">
+    <small>Copyright ©️ 2022 Tareas, Guillermo Daniel Mestas Alvarez</small>
+</footer>
+
+    </body>
+</html>
