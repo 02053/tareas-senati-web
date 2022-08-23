@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Mononoki;
+    src: url("../../assets/typografy/mononoki-Regular\ Nerd\ Font\ Complete\ Mono.ttf"),
+        url("../../assets/typografy/mononoki-Regular\ Nerd\ Font\ Complete\ Mono\ Windows\ Compatible.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Luna;
+    src: url("../../assets/typografy/Luna.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Sfttr;
+    src: url("../../assets/typografy/SetFireToTheRain.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: AveFedan;
+    src: url("../../assets/typografy/AveFedan_PERSONAL_USE.ttf");
+    font-display: swap;
+}
+
+/* body { */
+/*     background-image: url('../../assets/media/pngwing.com(3).png'), */
+/*         url('../../assets/media/pngwing.com\(2\).png'); */
+/*     background-size: cover, 50%; */
+/*     background-repeat: no-repeat, no-repeat; */
+/*     background-position: bottom center, 0% 0%; */
+/* } */
