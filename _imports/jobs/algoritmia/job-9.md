@@ -8,7 +8,7 @@
 
 ## Listando las bases de datos y creando una nueva
 
-![listando y creando una base de datos](../../assets/media/listado-y-creado-db.png)
+![listando y creando una base de datos](../../assets/media/job-9/listado-y-creado-db.png)
 
 En la captura se puede el listado de las bases de datos de mi ordernador la cual lo realizo con el
 comando:
@@ -27,7 +27,7 @@ y por ultimo realizo un nuevo listado de las bases de datos y se muestra la base
 
 ## Creando la tabla alumnos en la base de datos creada
 
-![Creando tabla alumnos en la base de datos](../../assets/media/crear-decribir-tabla.png)
+![Creando tabla alumnos en la base de datos](../../assets/media/job-9/crear-decribir-tabla.png)
 
 En la imagen se muestra la creacion de la tabla alumnos utilizando el comando:
 

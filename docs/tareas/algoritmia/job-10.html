@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="charset" content="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="og:type" content="website">
+<meta name="theme-color" content="#171c28">
+<link rel="icon" href="../../assets/media/hamster.png">
+<link rel="apple-touch-icon" href="../../assets/media/hamster.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/gruvbox-light-soft.min.css"
+integrity="sha512-HCASvUkisVRkxDnRPjJ2crnv44xGTtlNYsaipi4neWNFUQi613L4w6WsD8G4oqgj77YTh3iPuPWU30mZRxS7vA=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="../../assets/css/style.css" rel="stylesheet">
+<script src="../../assets/js/main.js" defer></script>
+
+        <title>10. Realizar los ejercicios de la pagina 65 y 66</title>
+<meta name="twitter:title" property="og:title" content="10. Realizar los ejercicios de la pagina 65 y 66">
+
+        <meta name="description" content="10. Realizar los ejercicios de la pagina 65 y 66">
+<meta name="twitter:description" property="og:description" content="10. Realizar los ejercicios de la pagina 65 y 66">
+
+    </head>
+    <body>
+        <header class="header">
+    <div class="header-container">
+        <span class="logo">Meliora</span>
+
+        <div class="container-btn">
+            <a href="#menu" class="menu-btn menu-open">
+                <img src="../../assets/media/menu-bars.svg" alt="menu bars svg">
+            </a>
+            <a href="#" class="menu-btn menu-close none">
+                <img src="../../assets/media/menu-close.svg" alt="menu close svg">
+            </a>
+        </div>
+
+        <nav class="menu" id="menu">
+            <a href="../../">Inicio</a>
+            <a href="../../tareas">Tareas</a>
+            <a href="#contactame">Contactame</a>
+            <a href="#more">More</a>
+            <a href="#aspecto">Aspecto</a>
+        </nav>
+        <!-- <i class="fa-solid fa-sun"></i> -->
+        <!-- <i class="fa-solid fa-moon none"></i> -->
+    </div>
+</header>
+
+        <section class="job">
+
+<p><em>Algoritmia de Programacion</em></p>
+<h1 id="10-realizar-los-ejercicios-de-la-pagina-65-y-66">10. Realizar los ejercicios de la pagina 65 y 66</h1>
+<p><em>Agosto 24.2022 <span>|</span> Guillermo Mestas</em></p>
+<p><strong>NOTA: Al estar trabajando en una distribucion de linux, en especifico un &quot;Arch linux&quot;, si ve la
+parte superior de la ventana creada por tkinter, se observa que este no muestra el titulo ni el icono
+que en un windows si lo haria; ademas si coloco la instruccion &quot;window.iconbitmap()&quot; este me produciria
+un error ya que mi distribucion de linux no la soporta.</strong></p>
+<p>En la siguiente imagen se ve el error que saldria si coloco &quot;window.iconbitmap()&quot;</p>
+<p><img src="../../assets/media/job-10/error-ico.png" alt="Erro en arch linux si coloco window.iconbitmap"></p>
+<p>Como se ve en la captura al lado izquierdo se ve que coloque &quot;window.iconbitmap(&#39;what.ico&#39;)&quot; pero
+al ejecutarlo me muestra un error que me dice que &quot;what.ico&quot; no esta definido, es decir no me muestra
+un error de que no tenga el archivo, si no que al estar en un linux no lo reconoce.</p>
+<p>Ahora si no esta convencido le muestro otra captura de pantalla en la cual muestro la carpeta
+donde esta el archivo python el cual tiene el nombre &quot;main.py&quot; y el &quot;what.ico&quot;:</p>
+<p><img src="../../assets/media/job-10/carpeta-muestra.png" alt="Muetra de la carpeta gui"></p>
+<p>Asi que esta es la razon por la que no utilizo la instruccion &quot;window.iconbitmap()&quot;.</p>
+<h2 id="proyectando-una-imagen">Proyectando una imagen:</h2>
+<p><img src="../../assets/media/job-10/ver-imagen-en-tk.png" alt="Proyectando una imagen en formato jpg utilizando pillow y tkinter"></p>
+<p>En la captura se visualiza la ventana creada por tkinter con una imagen.</p>
+<p>Al estar utilizando una imagen en formato <strong>jpg</strong> y no uno de los siguientes formatos: PGM, PPM, GIF, PNG; los cuales
+si soporta tkinter me vi en la obligacion de utilizar una biblioteca llamada <strong>pillow</strong>, el cual nos permite manipular
+imagenes directamente desde python; con la cual podremos hacer que tkinter pueda usar el formato <strong>jpg</strong> y ademas poder
+redimensionar sus medidas para que se pueda visualizar en la ventana, todo esto se muestra en el siguiente codigo:</p>
+<pre><code class="language-python">from PIL import Image, ImageTk
+from tkinter import Tk, Frame, Label
+
+root = Tk()
+miFrame = Frame(root, width = 800, height = 600)
+miFrame.pack()
+
+# Para poder trabajar con imagenes en formato jpg en tkinter debo de
+# utilizar una libreria externa llamada pillow
+imagen = Image.open(&quot;fondo.jpg&quot;)
+
+# La imagen al ser muy grande la redimensionamos su tamaño con pillow
+resize_image = imagen.resize((700, 500))
+miImagen = ImageTk.PhotoImage(resize_image)
+
+Label(miFrame, image=miImagen).place(x = 50, y = 50)
+
+root.mainloop()</code></pre>
+<h2 id="creando-un-formulario-sencillo">Creando un formulario sencillo:</h2>
+<p><img src="../../assets/media/job-10/form-en-tk-1.png" alt="Formulario esperando que se acepte"></p>
+<p>En la imagen se muestra la ventana creada de tkinter preguntandome si deseo continuar.</p>
+<p>En la siguiente captura se muestra el formulario con los campos rellenados:</p>
+<p><img src="../../assets/media/job-10/form-en-tk-2.png" alt="Formulario sencillo"></p>
+<pre><code class="language-python">from tkinter import Tk, Label, Entry, Button, Radiobutton, messagebox
+
+window = Tk()
+window.title(&quot;Datos&quot;)
+window.config(bg=&quot;#fff&quot;)
+window.resizable(False, False)
+window.geometry(&quot;600x400&quot;)
+messagebox.askyesno(&quot;Datos&quot;, &quot;Desea continuar&quot;)
+
+Titulo = Label(window, text=&quot;Registro de Datos&quot;, fg=&quot;blue&quot;, bg=&quot;#fff&quot;,
+    font=(&quot;Monospace&quot;, 24)).place(x=160, y=20)
+
+nombre = Label(window, text=&quot;Nombre&quot;, fg=&quot;#000&quot;, bg=&quot;#fff&quot;,
+    font=(&quot;Monospace&quot;, 18)).place(x=50, y=100)
+txt = Entry(window, width=20, font=(&quot;Monospace&quot;)).place(x=200, y=110)
+
+apellido = Label(window, text=&quot;Apellidos&quot;, fg=&quot;#000&quot;, bg=&quot;#fff&quot;,
+    font=(&quot;Monospace&quot;, 18)).place(x=50, y=140)
+txt_1 = Entry(window, width=20, font=(&quot;Monospace&quot;)).place(x=200, y=150)
+
+Sexo = Label(window, text=&quot;Sexo&quot;, fg=&quot;#000&quot;, bg=&quot;#fff&quot;,
+    font=(&quot;Monospace&quot;, 18)).place(x=50, y=180)
+rad_1 = Radiobutton(window, text=&quot;M&quot;, bg=&quot;#fff&quot;, font=(&quot;Monospace&quot;, 16), value=1,
+        borderwidth=0, highlightthickness=0, activebackground=&quot;#fff&quot;).place(x=200, y=180)
+rad_2 = Radiobutton(window, text=&quot;F&quot;, bg=&quot;#fff&quot;, font=(&quot;Monospace&quot;, 16), value=2,
+    borderwidth=0, highlightthickness=0, activebackground=&quot;#fff&quot;).place(x=260, y=180)
+
+Aceptar = Button(window, text=&quot;ACEPTAR&quot;, bg=&quot;#f00&quot;, fg=&quot;#fff&quot;, font=(&quot;Monospace&quot;, 18),
+    activeforeground=&quot;#f00&quot;, activebackground=&quot;#fff&quot;, highlightthickness=2, borderwidth=0,
+    highlightbackground=&quot;#f00&quot;).place(x=250, y=300)
+
+window.mainloop()</code></pre>
+</section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"
+integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    hljs.highlightAll()
+</script>
+
+        <footer class="footer">
+    <small>Copyright ©️ 2022 Tareas, Guillermo Daniel Mestas Alvarez</small>
+</footer>
+
+    </body>
+</html>

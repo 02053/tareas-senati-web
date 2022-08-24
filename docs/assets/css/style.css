@@ -170,6 +170,7 @@ pre {
 img {
   max-width: 100%;
   height: auto;
+  border-radius: .44rem
 }
 
 /* https://codepen.io/TechnoBishop/pen/LEVPJw */
