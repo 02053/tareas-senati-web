@@ -54,19 +54,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <p><em>Algoritmia de Programacion</em></p>
 <h1 id="10-realizar-los-ejercicios-de-la-pagina-65-y-66">10. Realizar los ejercicios de la pagina 65 y 66</h1>
 <p><em>Agosto 24.2022 <span>|</span> Guillermo Mestas</em></p>
-<p><strong>NOTA: Al estar trabajando en una distribucion de linux, en especifico un &quot;Arch linux&quot;, si ve la
-parte superior de la ventana creada por tkinter, se observa que este no muestra el titulo ni el icono
-que en un windows si lo haria; ademas si coloco la instruccion &quot;window.iconbitmap()&quot; este me produciria
-un error ya que mi distribucion de linux no la soporta.</strong></p>
-<p>En la siguiente imagen se ve el error que saldria si coloco &quot;window.iconbitmap()&quot;</p>
-<p><img src="../../assets/media/job-10/error-ico.png" alt="Erro en arch linux si coloco window.iconbitmap"></p>
-<p>Como se ve en la captura al lado izquierdo se ve que coloque &quot;window.iconbitmap(&#39;what.ico&#39;)&quot; pero
-al ejecutarlo me muestra un error que me dice que &quot;what.ico&quot; no esta definido, es decir no me muestra
-un error de que no tenga el archivo, si no que al estar en un linux no lo reconoce.</p>
-<p>Ahora si no esta convencido le muestro otra captura de pantalla en la cual muestro la carpeta
-donde esta el archivo python el cual tiene el nombre &quot;main.py&quot; y el &quot;what.ico&quot;:</p>
-<p><img src="../../assets/media/job-10/carpeta-muestra.png" alt="Muetra de la carpeta gui"></p>
-<p>Asi que esta es la razon por la que no utilizo la instruccion &quot;window.iconbitmap()&quot;.</p>
 <h2 id="proyectando-una-imagen">Proyectando una imagen:</h2>
 <p><img src="../../assets/media/job-10/ver-imagen-en-tk.png" alt="Proyectando una imagen en formato jpg utilizando pillow y tkinter"></p>
 <p>En la captura se visualiza la ventana creada por tkinter con una imagen.</p>
@@ -129,6 +116,19 @@ Aceptar = Button(window, text=&quot;ACEPTAR&quot;, bg=&quot;#f00&quot;, fg=&quot
     highlightbackground=&quot;#f00&quot;).place(x=250, y=300)
 
 window.mainloop()</code></pre>
+<p><strong>NOTA: Al estar trabajando en una distribucion de linux, en especifico un &quot;Arch linux&quot;, si ve la
+parte superior de la ventana creada por tkinter, se observa que este no muestra el titulo ni el icono
+que en un windows si lo haria; ademas si coloco la instruccion &quot;window.iconbitmap()&quot; este me produciria
+un error ya que mi distribucion de linux no la soporta.</strong></p>
+<p>En la siguiente imagen se ve el error que saldria si coloco &quot;window.iconbitmap()&quot;</p>
+<p><img src="../../assets/media/job-10/error-ico.png" alt="Error en arch linux si coloco window.iconbitmap"></p>
+<p>Como se ve en la captura al lado izquierdo se ve que coloque &quot;window.iconbitmap(&#39;what.ico&#39;)&quot; pero
+al ejecutarlo me muestra un error que me dice que &quot;what.ico&quot; no esta definido, es decir no me muestra
+un error de que no tenga el archivo, si no que al estar en un linux no lo reconoce.</p>
+<p>Ahora si no esta convencido le muestro otra captura de pantalla en la cual muestro la carpeta
+donde esta el archivo python el cual tiene el nombre &quot;main.py&quot; y el &quot;what.ico&quot;:</p>
+<p><img src="../../assets/media/job-10/carpeta-muestra.png" alt="Muetra de la carpeta gui"></p>
+<p>Asi que esta es la razon por la que no utilizo la instruccion &quot;window.iconbitmap()&quot;.</p>
 </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"
 integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ=="

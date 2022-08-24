@@ -6,26 +6,6 @@
 
 <em>Agosto 24.2022 <span>|</span> Guillermo Mestas</em>
 
-**NOTA: Al estar trabajando en una distribucion de linux, en especifico un "Arch linux", si ve la
-parte superior de la ventana creada por tkinter, se observa que este no muestra el titulo ni el icono
-que en un windows si lo haria; ademas si coloco la instruccion "window.iconbitmap()" este me produciria
-un error ya que mi distribucion de linux no la soporta.**
-
-En la siguiente imagen se ve el error que saldria si coloco "window.iconbitmap()"
-
-![Erro en arch linux si coloco window.iconbitmap](../../assets/media/job-10/error-ico.png)
-
-Como se ve en la captura al lado izquierdo se ve que coloque "window.iconbitmap('what.ico')" pero
-al ejecutarlo me muestra un error que me dice que "what.ico" no esta definido, es decir no me muestra
-un error de que no tenga el archivo, si no que al estar en un linux no lo reconoce.
-
-Ahora si no esta convencido le muestro otra captura de pantalla en la cual muestro la carpeta
-donde esta el archivo python el cual tiene el nombre "main.py" y el "what.ico":
-
-![Muetra de la carpeta gui](../../assets/media/job-10/carpeta-muestra.png)
-
-Asi que esta es la razon por la que no utilizo la instruccion "window.iconbitmap()".
-
 ## Proyectando una imagen:
 
 ![Proyectando una imagen en formato jpg utilizando pillow y tkinter](../../assets/media/job-10/ver-imagen-en-tk.png)
@@ -103,5 +83,25 @@ Aceptar = Button(window, text="ACEPTAR", bg="#f00", fg="#fff", font=("Monospace"
 
 window.mainloop()
 ```
+
+**NOTA: Al estar trabajando en una distribucion de linux, en especifico un "Arch linux", si ve la
+parte superior de la ventana creada por tkinter, se observa que este no muestra el titulo ni el icono
+que en un windows si lo haria; ademas si coloco la instruccion "window.iconbitmap()" este me produciria
+un error ya que mi distribucion de linux no la soporta.**
+
+En la siguiente imagen se ve el error que saldria si coloco "window.iconbitmap()"
+
+![Error en arch linux si coloco window.iconbitmap](../../assets/media/job-10/error-ico.png)
+
+Como se ve en la captura al lado izquierdo se ve que coloque "window.iconbitmap('what.ico')" pero
+al ejecutarlo me muestra un error que me dice que "what.ico" no esta definido, es decir no me muestra
+un error de que no tenga el archivo, si no que al estar en un linux no lo reconoce.
+
+Ahora si no esta convencido le muestro otra captura de pantalla en la cual muestro la carpeta
+donde esta el archivo python el cual tiene el nombre "main.py" y el "what.ico":
+
+![Muetra de la carpeta gui](../../assets/media/job-10/carpeta-muestra.png)
+
+Asi que esta es la razon por la que no utilizo la instruccion "window.iconbitmap()".
 
 </section>
