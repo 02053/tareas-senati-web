@@ -8,7 +8,7 @@
 
 ## Proyectando una imagen:
 
-![Proyectando una imagen en formato jpg utilizando pillow y tkinter](../../assets/media/job-10/ver-imagen-en-tk.png)
+![Proyectando una imagen en formato jpg utilizando pillow y tkinter](../../assets/media/algoritmia/job-10/ver-imagen-en-tk.png)
 
 En la captura se visualiza la ventana creada por tkinter con una imagen.
 
@@ -41,13 +41,13 @@ root.mainloop()
 ## Creando un formulario sencillo:
 
 
-![Formulario esperando que se acepte](../../assets/media/job-10/form-en-tk-1.png)
+![Formulario esperando que se acepte](../../assets/media/algoritmia/job-10/form-en-tk-1.png)
 
 En la imagen se muestra la ventana creada de tkinter preguntandome si deseo continuar.
 
 En la siguiente captura se muestra el formulario con los campos rellenados:
 
-![Formulario sencillo](../../assets/media/job-10/form-en-tk-2.png)
+![Formulario sencillo](../../assets/media/algoritmia/job-10/form-en-tk-2.png)
 
 ```python
 from tkinter import Tk, Label, Entry, Button, Radiobutton, messagebox
@@ -91,7 +91,7 @@ un error ya que mi distribucion de linux no la soporta.**
 
 En la siguiente imagen se ve el error que saldria si coloco "window.iconbitmap()"
 
-![Error en arch linux si coloco window.iconbitmap](../../assets/media/job-10/error-ico.png)
+![Error en arch linux si coloco window.iconbitmap](../../assets/media/algoritmia/job-10/error-ico.png)
 
 Como se ve en la captura al lado izquierdo se ve que coloque "window.iconbitmap('what.ico')" pero
 al ejecutarlo me muestra un error que me dice que "what.ico" no esta definido, es decir no me muestra
@@ -100,7 +100,7 @@ un error de que no tenga el archivo, si no que al estar en un linux no lo recono
 Ahora si no esta convencido le muestro otra captura de pantalla en la cual muestro la carpeta
 donde esta el archivo python el cual tiene el nombre "main.py" y el "what.ico":
 
-![Muetra de la carpeta gui](../../assets/media/job-10/carpeta-muestra.png)
+![Muetra de la carpeta gui](../../assets/media/algoritmia/job-10/carpeta-muestra.png)
 
 Asi que esta es la razon por la que no utilizo la instruccion "window.iconbitmap()".
 
